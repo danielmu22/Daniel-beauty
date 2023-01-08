@@ -6,22 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothes - Newsletters</title>
-    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" media="screen and (min-width: 1000px)" href="css/mycss.css">
+    <link rel="stylesheet" media="screen and (max-width: 1000px) and (min-width: 600px)" href="./css/tablets.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="./css/smallscreen.css">
 </head>
 
 <body>
 
     <nav>
-        <ul class="paginas relative">
+        <ul class="paginas">
             <li class="clothe">Daniel's beauty</li>
             <li class="paginas"><a href="index.html">Moda</a></li>
             <li class="paginas"><a href="salud.html">Salud</a></li>
             <li class="paginas"><a href="famosos.html">Famosos</a></li>
-            <li class="paginas">Newsletters</li>
+            <li class="paginas linkSeleccionado"><a href="newsletters.html">Newsletters</a></li>
             <li class="paginas"><a href="sobreNosostros.html">Sobre nosotros</a></li>
         </ul>
-        <p id="lineaMarcarPaginaNewslettters">_</p>
+
     </nav>
+
+    <a class="abrirMenu"><img src="boton-de-menu-de-tres-lineas-horizontales.png"></a>
+
+    <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <li class="clothe">Daniel's beauty</li>
+            <li class="paginas"><a class="menuNoActivo" href="index.html">Moda</a></li>
+            <li class="paginas"><a class="menuNoActivo" href="salud.html">Salud</a></li>
+            <li class="paginas"><a class="menuNoActivo" href="famosos.html">Famosos</a></li>
+            <li class="paginas"><a class="menuActivo" href="newsletters.html">Newsletters</a></li>
+            <li class="paginas"><a class="menuNoActivo" href="sobreNosostros.html">Sobre nosotros</a></li>
+        </div>
+    </div>
 
     <section id="fondoFormularioNewslettters" class="newsletters">
         <article class="formularioNewslettters">
@@ -45,6 +61,20 @@
         </ul>
         <small class="copy">&copy;2021 Daniels beauty magazing, Inc. All Rights Reserved.</small>
     </footer>
+
+    <script defer>
+        const menuOpen = document.querySelector(".abrirMenu");
+        const menuClose = document.querySelector(".close");
+        const overlay = document.querySelector(".overlay");
+
+        menuOpen.addEventListener("click", () => {
+            overlay.classList.add("overlay--active");
+        });
+
+        menuClose.addEventListener("click", () => {
+            overlay.classList.remove("overlay--active");
+        });
+    </script>
 
 </body>
 

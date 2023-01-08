@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/mycss.css">
-    <title>Clothes - Moda</title>
+    <title>Clothes - noticia</title>
+    <link rel="stylesheet" media="screen and (min-width: 100px)" href="./..css/mycss.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="./../css/smallscreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 1000px) and (min-width: 600px)" href="...//css/tablets.css">
 </head>
 
 <body>
@@ -14,14 +16,28 @@
     <nav>
         <ul class="paginas">
             <li class="clothe">Daniel's beauty</li>
-            <li class="paginas"><a href="../index.html" style="width: 100%; height: 100%;">Moda</a></li>
-            <li class="paginas"><a href="../salud.html">Salud</a></li>
-            <li class="paginas"><a href="../famosos.html">Famosos</a></li>
-            <li class="paginas"><a href="../newsletters.html">Newsletters</a></li>
-            <li class="paginas"><a href="../sobreNosostros.html">Sobre nosotros</a></li>
+            <li class="paginas linkSeleccionado"><a href="./../index.html">Moda</a></li>
+            <li class="paginas"><a href="./../salud.html">Salud</a></li>
+            <li class="paginas"><a href="./../famosos.html">Famosos</a></li>
+            <li class="paginas"><a href="./../newsletters.html">Newsletters</a></li>
+            <li class="paginas"><a href="./../sobreNosostros.html">Sobre nosotros</a></li>
         </ul>
-        <p id="lineaMarcarPaginaModa">_</p>
+
     </nav>
+
+    <a class="abrirMenu"><img src="./../boton-de-menu-de-tres-lineas-horizontales.png"></a>
+
+    <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <li class="clothe">Daniel's beauty</li>
+            <li class="paginas"><a class="menuActivo" href="./../index.html">Moda</a></li>
+            <li class="paginas"><a class="menuNoActivo" href="./../salud.html">Salud</a></li>
+            <li class="paginas"><a class="menuNoActivo" href="./../famosos.html">Famosos</a></li>
+            <li class="paginas"><a class="menuNoActivo" href="./../newsletters.html">Newsletters</a></li>
+            <li class="paginas"><a class="menuNoActivo" href="./../sobreNosostros.html">Sobre nosotros</a></li>
+        </div>
+    </div>
 
     <section id="banner" class="relative">
         <img src="../img/banner.jpg" class="fotoBanner" />
@@ -41,18 +57,22 @@
 
         <div class="cb"></div>
 
-        <aside><img src="../img/imagenesNoticiasModa/primeraNoticiaFoto2.png" class="fotoPrimeraNoticiaModa2" /></aside>
+        <div class="segundaNoticia">
 
-        <p class="textoPrimeraNoticia2"><strong>Con bolsillos</strong></br>
-            Las cazadoras con bolsillos frontales, estilo cargo, y en blanco son una tendencia viral entre las 
-            prescriptoras de moda en Instagram. Esta, de Bimba y Lola (150 €), con una textura similar al tweed 
-            nos gusta además por su corte boxy.</p>
+            <aside><img src="../img/imagenesNoticiasModa/primeraNoticiaFoto2.png" class="fotoPrimeraNoticiaModa2" />
+            </aside>
+
+            <p class="textoPrimeraNoticia2"><strong>Con bolsillos</strong></br>
+                Las cazadoras con bolsillos frontales, estilo cargo, y en blanco son una tendencia viral entre las
+                prescriptoras de moda en Instagram. Esta, de Bimba y Lola (150 €), con una textura similar al tweed
+                nos gusta además por su corte boxy.</p>
+        </div>
 
         <div class="cb"></div>
 
         <p class="textoPrimeraNoticia3"><strong>Con flecos</strong></br>
-            En faldas, vestidos, chaquetas... Cuesta encontrar un desfile de otoño-invierno 2020 que no se sume 
-            a la tendencia de los flecos, que promete pisar fuerte en esta nueva temporada. Esta cazadora de 
+            En faldas, vestidos, chaquetas... Cuesta encontrar un desfile de otoño-invierno 2020 que no se sume
+            a la tendencia de los flecos, que promete pisar fuerte en esta nueva temporada. Esta cazadora de
             Zara (39,95 €) cuenta además con un toque glam gracias a los brillos de sus flecos.</p>
 
         <aside><img src="../img/imagenesNoticiasModa/primeraNoticiaFoto3.png" class="fotoPrimeraNoticiaModa3" /></aside>
@@ -72,6 +92,20 @@
 
         <small class="copy">&copy;2021 Daniels beauty magazing, Inc. All Rights Reserved.</small>
     </footer>
+
+    <script defer>
+        const menuOpen = document.querySelector(".abrirMenu");
+        const menuClose = document.querySelector(".close");
+        const overlay = document.querySelector(".overlay");
+
+        menuOpen.addEventListener("click", () => {
+            overlay.classList.add("overlay--active");
+        });
+
+        menuClose.addEventListener("click", () => {
+            overlay.classList.remove("overlay--active");
+        });
+    </script>
 
 </body>
 

@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" media="screen and (min-width: 1000px)" href="css/mycss.css">
+    <link rel="stylesheet" media="screen and (max-width: 1000px) and (min-width: 600px)" href="./css/tablets.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="./css/smallscreen.css">
     <title>Clothes - Moda</title>
 </head>
 
@@ -14,14 +16,28 @@
     <nav>
         <ul class="paginas">
             <li class="clothe">Daniel's beauty</li>
-            <li class="paginas">Moda</li>
+            <li class="paginas linkSeleccionado"><a href="index.html">Moda</a></li>
             <li class="paginas"><a href="salud.html">Salud</a></li>
             <li class="paginas"><a href="famosos.html">Famosos</a></li>
             <li class="paginas"><a href="newsletters.html">Newsletters</a></li>
             <li class="paginas"><a href="sobreNosostros.html">Sobre nosotros</a></li>
         </ul>
-        <p id="lineaMarcarPaginaModa">_</p>
+
     </nav>
+
+    <a class="abrirMenu"><img src="boton-de-menu-de-tres-lineas-horizontales.png"></a>
+
+    <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <li class="clothe">Daniel's beauty</li>
+            <li class="paginas"><a class="menuActivo" href="index.html">Moda</a></li>
+            <li class="paginas"><a class="menuNoActivo" href="salud.html">Salud</a></li>
+            <li class="paginas"><a class="menuNoActivo" href="famosos.html">Famosos</a></li>
+            <li class="paginas"><a class="menuNoActivo" href="newsletters.html">Newsletters</a></li>
+            <li class="paginas"><a class="menuNoActivo" href="sobreNosostros.html">Sobre nosotros</a></li>
+        </div>
+    </div>
 
     <section id="banner" class="relative">
         <img src="img/banner.jpg" class="fotoBanner" />
@@ -31,39 +47,43 @@
     <section id="fondoDeColor" class="relative">
         <h2 class="nombreSeccion"><u>Nuevos estilos</u></h2>
 
-        <article class="noticia">
-            <a href="noticiasModa/primeraNoticia.html">
-                <img src="img/1noticiaModa.png" class="fotoNoticia" />
-                <p class="descripcion">Las nuevas chaquetas más usadas para esta nueva temporada</p>
-            </a>
-        </article>
-        <article class="noticia">
-            <a href="noticiasModa/primeraNoticia.html">
-                <img src="img/1noticiaModa.png" class="fotoNoticia" />
-                <p class="descripcion">Las nuevas chaquetas más usadas para esta nueva temporada</p>
-            </a>
-        </article>
-        <article class="cb"></article>
+        <div class="noticias">
 
-        <article class="noticia">
-            <a href="noticiasModa/primeraNoticia.html">
-                <img src="img/1noticiaModa.png" class="fotoNoticia" />
-                <p class="descripcion">Las nuevas chaquetas más usadas para esta nueva temporada</p>
-            </a>
-        </article>
-        <article class="noticia">
-            <a href="noticiasModa/primeraNoticia.html">
-                <img src="img/1noticiaModa.png" class="fotoNoticia" />
-                <p class="descripcion">Las nuevas chaquetas más usadas para esta nueva temporada</p>
-            </a>
-        </article>
-        <article class="cb"></article>
+            <article class="noticia">
+                <a href="noticiasModa/primeraNoticia.html">
+                    <img src="img/1noticiaModa.png" class="fotoNoticia" />
+                    <p class="descripcion">Las nuevas chaquetas más usadas para esta nueva temporada</p>
+                </a>
+            </article>
+            <article class="noticia">
+                <a href="noticiasModa/primeraNoticia.html">
+                    <img src="img/1noticiaModa.png" class="fotoNoticia" />
+                    <p class="descripcion">Las nuevas chaquetas más usadas para esta nueva temporada</p>
+                </a>
+            </article>
+            <article class="cb"></article>
+
+            <article class="noticia">
+                <a href="noticiasModa/primeraNoticia.html">
+                    <img src="img/1noticiaModa.png" class="fotoNoticia" />
+                    <p class="descripcion">Las nuevas chaquetas más usadas para esta nueva temporada</p>
+                </a>
+            </article>
+            <article class="noticia">
+                <a href="noticiasModa/primeraNoticia.html">
+                    <img src="img/1noticiaModa.png" class="fotoNoticia" />
+                    <p class="descripcion">Las nuevas chaquetas más usadas para esta nueva temporada</p>
+                </a>
+            </article>
+            <article class="cb"></article>
+        </div>
+
 
         <aside><img src="img/imagenModa.png" class="fotoModa" /></aside>
     </section>
 
     <footer>
-        <p class="footerClothe flotar">Daniels beauty</p>
+        <p class="footerClothe">Daniels beauty</p>
         <ul class="footerPages">
             <li class="footerPage"><a href="index.html">MODA</a></li>
             <li class="footerPage"><a href="salud.html">SALUD</a></li>
@@ -75,6 +95,20 @@
 
         <small class="copy">&copy;2021 Daniels beauty magazing, Inc. All Rights Reserved.</small>
     </footer>
+
+    <script defer>
+        const menuOpen = document.querySelector(".abrirMenu");
+        const menuClose = document.querySelector(".close");
+        const overlay = document.querySelector(".overlay");
+
+        menuOpen.addEventListener("click", () => {
+            overlay.classList.add("overlay--active");
+        });
+
+        menuClose.addEventListener("click", () => {
+            overlay.classList.remove("overlay--active");
+        });
+    </script>
 
 </body>
 

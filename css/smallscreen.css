@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Engagement&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Engagement', Fallback, sans-serif;
+}
+
+.paginas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+.paginas .clothe {
+    display: none;
+}
+
+.linkSeleccionado {
+    border-bottom: 5px black solid;
+}
+
+.paginas li {
+    text-decoration: none;
+}
+
+.paginas li a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: color 0.5s, background-color 1s;
+}
+
+.paginas li a:hover {
+    background-color: #D2B3A2;
+    text-decoration: none;
+    color: whitesmoke;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+.clothe {
+    font-size: 5rem;
+    color: #F3F1F1;
+    -webkit-text-stroke: 1px black;
+    list-style: none;
+}
+
+.paginas {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.fotoBanner {
+    width: 100%;
+    background-color: transparent;
+}
+
+.slogan {
+    font-size: 4rem;
+    margin:  0.25em auto;
+    margin-bottom: 0.4em;
+    width: 80%;
+    position: static;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+    border: 4px solid black;
+    text-align: center;
+}
+
+#fondoDeColor {
+    background-color: #D2B3A2;
+    padding-bottom: 2em;
+
+}
+
+.noticias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nombreSeccion {
+    font-size: 2.5em;
+    padding: 2rem 2rem;
+}
+
+.fotoModa {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 80%;
+    display: none;
+}
+
+.fotoSalud {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 80%;
+    display: none;
+}
+
+.fotoFamoso {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 80%;
+    display: none;
+}
+
+.noticia {
+    margin: 0 auto;
+    width: 50%;
+    border: 3px solid #000000;
+    border-radius: 1.1rem;
+    background-color: #F3F1F1;
+    float: left;
+    margin-bottom: 2rem;
+}
+
+.noticia:hover {
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.noticia a {
+    text-decoration: none;
+    color: black;
+}
+
+.fotoNoticia {
+    border: 2px solid #000000;
+    width: 99%;
+    border-radius: 1rem;
+}
+
+.descripcion {
+    font-size: 2rem;
+    background-color: #F3F1F1;
+    padding-left: 1rem;
+    border-radius: 1rem;
+}
+
+.flotar {
+    float: left;
+}
+
+.cb {
+    clear: both;
+}
+
+footer {
+    background-color: #000000;
+    padding-bottom: 2rem;
+    padding-left: 0;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy {
+    padding-left: 0;
+    font-size: 1.5rem;
+    color: #F3F1F1;
+
+}
+
+.sobreNosotros {
+    padding: 1rem 1rem;
+}
+
+td {
+    width: 100%;
+}
+
+.textoSobreNosotros {
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.tituloRedactores {
+    font-size: 2rem;
+    width: 15rem;
+}
+
+.paddingTdModa {
+    padding-left: 0;
+}
+
+.paddingTdSalud {
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.paddingTdFamoso {
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.nombres {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.listaNombres {
+    padding-left: 2rem;
+}
+
+.footerClothe {
+    text-align: center;
+    font-size: 5rem;
+    color: #F3F1F1;
+    -webkit-text-stroke: 1px black;
+    width: 100%;
+}
+
+.footerPages {
+    display: wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 80%;
+    padding: 1em 0;
+}
+
+.footerPage {
+    
+    text-align: center;
+    margin: 0.25em 2em;
+}
+
+.footerPage a {
+    color: cornsilk;
+    text-decoration: none;
+}
+
+#lineaMarcarPaginaModa {
+    font-size: 15rem;
+    position: absolute;
+    left: 32.5%;
+    top: -9.5rem;
+}
+
+#lineaMarcarPaginaSalud {
+    font-size: 15rem;
+    position: absolute;
+    left: 44%;
+    top: -9.5rem;
+}
+
+#lineaMarcarPaginaFamosos {
+    font-size: 15rem;
+    position: absolute;
+    left: 56.5%;
+    top: -9.5rem;
+}
+
+#lineaMarcarPaginaNewslettters {
+    font-size: 15rem;
+    position: absolute;
+    right: 24%;
+    top: -9.5rem;
+}
+
+#lineaMarcarPaginaSobre {
+    font-size: 15rem;
+    position: absolute;
+    right: 7%;
+    top: -9.5rem;
+}
+
+#fondoFormularioNewslettters {
+    padding: 3rem 0;
+    background-color: #D2B3A2;
+}
+
+.formularioNewslettters {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.formularioNewslettters form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tituloFormularioNewlettes {
+    padding: 2rem;
+    font-size: 2.5rem;
+
+}
+
+.textoFormularioNewlettes {
+    padding: 0 2rem;
+    font-size: 1.5rem;
+}
+
+.inputFormularioNewlettes {
+    padding: 0.5rem 4rem;
+    width: 30%;
+    margin-top: 3em;
+    border-radius: 0.5rem;
+}
+
+.botonFormularioNewlettes {
+    width: 12em;
+    margin: 0 auto;
+    height: 3em;
+    margin-top: 3.5em;
+    background-color: #D2B3A2;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: margin-top 0.5s, background-color 0.5s, width 0.5s, height 0.5s, font-size 0.5s, margin-left 0.5s;
+}
+
+.botonFormularioNewlettes:hover {
+    background-color: #cf8b67;
+    margin-top: 2.5em;
+    margin-left: 3em;
+    font-size: 1.1em;
+}
+
+.fotoPrimeraNoticiaModa1 {
+    width: 100%;
+}
+
+.textoPrimeraNoticia1 {
+    width: 80%;
+    margin: 2em auto;
+    font-size: 1.5em;
+}
+
+.fotoPrimeraNoticiaModa2 {
+    width: 100%;
+    margin: 2em auto;
+}
+
+.textoPrimeraNoticia2 {
+    width: 80%;
+    margin: 2em auto;
+    font-size: 1.5em;
+}
+.segundaNoticia {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.fotoPrimeraNoticiaModa3 {
+    width: 100%;
+}
+
+.textoPrimeraNoticia3 {
+    width: 80%;
+    margin: 2em auto;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header nav {
+    width: 80%;
+    height: 100%;
+    left: -100%;
+    margin: 0;
+    position: fixed;
+}
+
+header nav ul li {
+    display: block;
+    float: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.menu_bar {
+    display: block;
+    width: 100%;
+    background: #ccc;
+}
+
+.menu_bar .bt-menu {
+    display: block;
+    padding: 20px;
+    background: #024959;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.menu_bar span {
+    float: right;
+    font-size: 40px;
+}
+
+
+nav {
+    display: none;
+}
+
+/* Mobile Nav */
+
+.menu {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+    width: 100%;
+}
+
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #0088a9;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 0;
+    right: 45px;
+    font-size: 100px;
+    color: #edf0f1;
+}
+
+.imagenUsuario {
+    width: 3.5em;
+    border-radius: 3em;
+    border: 0.2em rgba(0, 136, 169, 0.8) solid;
+    margin-right: 2em;
+}
+
+.usuarioLogout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .nav__links,
+    .cta {
+        display: none;
+    }
+
+    .menu {
+        display: initial;
+    }
+
+    .imagenUsuario {
+        display: none;
+    }
+
+    .imagenUsuarioMovil {
+        width: 10em;
+        border-radius: 8em;
+        border: 0.2em #238b3d solid;
+        margin-bottom: 2em;
+    }
+}
+
+
+.abrirMenu {
+    width: 1.5em;
+    height: 1.5em;
+    position:fixed;
+    top: 2em;
+    right: 2em;
+    z-index: 1;
+    background-color: #ccc;
+    border-radius: 100%;
+    padding: 1em;
+}
+
+.abrirMenu img {
+    width: 100%;
+}
+
+.abrirMenu{
+    display: block;
+}
+.overlay{
+    display: block;
+}
+
+.menuActivo{
+    color: #cf8b67;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menuNoActivo{
+    color: #ccc;
+    text-decoration: none;
+}
+
+td{
+    display: block;
+}
